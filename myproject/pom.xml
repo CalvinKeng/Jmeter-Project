@@ -113,7 +113,7 @@
   </dependencies>
   
   <!-- 第5步之1(共2) 確認jasper報表能夠產生之後,引入中文字形解決報表顯示中文字的問題-->
-    <!--
+    <!--  當時課程內教學生們用這個引入字形
   <repositories>
     <repository>
 	  <id>external_lib</id>
@@ -122,7 +122,8 @@
     </repository>
   </repositories>
     -->
-  
+
+    <!--  非置於local端的專案用這個寫法比較好？(可能) -->
   <repositories>
     <repository>
 	  <id>external_lib</id>

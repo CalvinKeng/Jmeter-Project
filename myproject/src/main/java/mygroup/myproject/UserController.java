@@ -38,6 +38,12 @@ public class UserController {
     	this.userService = userService;
     }
     
+    // 網址的port號8080之後加"/user"(按照上面的RequestMapping的設定) method:'get'走這裡
+    @GetMapping
+	public List<UserModel> getAllUserModels(){
+		return userService.getAllUserModels();
+	}
+	
     @GetMapping("/{id}")
 	public void getUserModelById_pdf(HttpServletResponse rsp, @PathVariable Integer id) {
     	//(json)回傳查詢的結果
@@ -56,12 +62,6 @@ public class UserController {
     	} catch (Exception e) {
     		e.printStackTrace();
     	}
-	}
-	
-    // 網址的port號8080之後加"/user"(按照上面的RequestMapping的設定) method:'get'走這裡
-    @GetMapping
-	public List<UserModel> getAllUserModels(){
-		return userService.getAllUserModels();
 	}
 	
     @GetMapping("/pdf")
