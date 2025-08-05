@@ -33,9 +33,9 @@ public class UserService {
 	}
 	
 	// 查詢多筆(原始的方法,方法名稱去除 _1 之後把新的方法註解掉,會進資料庫裏面撈資料)
-	public List<UserModel> getAllUserModels_1(){
-		return userMapper.findAll();
-	}
+	// public List<UserModel> getAllUserModels_1(){
+	// 	return userMapper.findAll();
+	// }
 	// 查詢多筆(新的方法,不進資料庫內撈資料,畫面內顯示一些假資料用的)
 	public List<UserModel> getAllUserModels(){
 		List<UserModel> list = new ArrayList<>();
@@ -79,3 +79,4 @@ public class UserService {
 		userMapper.updateUserModel(name,class_,book,club_id);
 	}
 }
+
